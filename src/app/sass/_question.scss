@@ -1,0 +1,76 @@
+.question{
+  grid-row: question-start/question-end;
+  grid-column: 1/13;
+  padding: 5rem;
+  background-color: white;
+
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  grid-row-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  @media only screen and (max-width: $bp-small){
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 0;
+  }
+  &-shape{
+    &--1{
+      position: absolute;
+      top: 3rem;
+      left: -16rem;
+      width: 20rem;
+      height: 20rem;
+      transform: matrix(0.87, 0.5, -0.5, 0.87, 0, 0);
+      background: #F6F4F2 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+    &--2{
+      position: absolute;
+      top: 8rem;
+      right: -10rem;
+      width: 20rem;
+      height: 20rem;
+      transform: matrix(0.87, 0.5, -0.5, 0.87, 0, 0);
+      background: #F6F4F2 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+  }
+  &-header{
+    text-align: center;
+      width: 55%;
+      &--text{
+        font-family: $font-Subheader;
+        font-size: 4rem;
+      }
+  }
+
+  &-subHeader{
+    text-align: center;
+    width: 42%;
+    @media only screen and (max-width: $bp-mobile){
+      width: 50%;
+    }
+    &--text{
+      font-family: $font-medium;
+      font-size: 1.3rem;
+      letter-spacing: 0.44px;
+      color: #8B90A4;
+    }
+  }
+
+  &-button{
+    border-width: 0;
+    padding: 15px;
+    background-color: $color-pink;
+    color: white;
+    font-family: $font-medium;
+    text-transform: uppercase;
+    width: 20rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    outline:none;
+  }
+}

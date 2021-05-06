@@ -1,0 +1,121 @@
+$color-primary-light: #F8F2EA;
+
+$color-primary: #D3BFAD;
+
+$color-primary-dark-1: #9B8975;
+
+$color-primary-dark-2: #655549;
+
+$color-primary-dark-3: #ABA296;
+
+$color-dark: #151313;
+
+$color-primary-brown: #B55F3A;
+
+$color-blue: #31A3D5;
+
+$color-pink: #EC5555;
+
+// FONT VARIABLES
+$font-primary: 'Poppins-Regular';
+$font-header: 'Poppins-Bold';
+$font-Subheader: 'Poppins-SemiBold';
+$font-medium: 'Poppins-Medium';
+
+// RESPONSIVE BREAKPOINTS
+$bp-big: 87.5em;   // 1400px perfect
+$bp-largest: 75em;   // 1200px perfect
+$bp-large: 62.5em;   // 1000px perfect
+$bp-medium: 50em;    // 800px; perfect
+$bp-small: 37.5em;    // 600px;
+$bp-mobile: 26em; //416px
+$bq-mobile-small: 23.5; //378
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+  @media only screen and (max-width: $bp-big){
+    font-size: 56%;
+  }
+
+  @media only screen and (max-width: $bp-largest){
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-large){
+    font-size: 45%;
+  }
+
+  @media only screen and (max-width: $bp-medium){
+    font-size: 40%;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    font-size: 30%;
+  }
+
+  @media only screen and (max-width: $bp-mobile){
+    font-size: 25%;
+  }
+
+  @media only screen and (max-width: $bq-mobile-small){
+    font-size: 20%;
+  }
+}
+
+
+body {
+  font-family: $font-primary;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  display: grid;
+  width:100%;
+  overflow: hidden;
+  grid-template-rows: [header-start] 70rem [header-end]
+    repeat(3, [about-start] minmax(min-content, 35rem) [about-end])
+    [question-start] min-content [question-end mobile-start]
+    minmax(min-content, 45rem) [mobile-end review-start]
+    minmax(min-content,50rem) [review-end footer-start] 30rem [footer-end];
+  grid-template-columns: repeat(12, minmax(min-content,14rem));
+  @media only screen and (max-width: $bp-mobile){
+    grid-template-rows: [header-start] 70rem [header-end]
+    repeat(3, [about-start] minmax(min-content, 35rem) [about-end])
+    [question-start] min-content [question-end mobile-start]
+    minmax(min-content, 45rem) [mobile-end review-start]
+    minmax(min-content,50rem) [review-end footer-start] 34rem [footer-end];
+  }
+}
+
+@font-face{
+  font-family: 'Poppins-Regular';
+  src: url("/assets/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face{
+  font-family: 'Poppins-Bold';
+  src: url("/assets/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face{
+  font-family: 'Poppins-SemiBold';
+  src: url("/assets/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face{
+  font-family: 'Poppins-Medium';
+  src: url("/assets/Poppins/Poppins-Medium.ttf");
+}

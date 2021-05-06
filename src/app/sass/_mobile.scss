@@ -1,0 +1,109 @@
+.mobile{
+  grid-row: mobile-start/mobile-end;
+  grid-column: 1/13;
+  display: flex;
+  justify-content: center;
+  background-color: #FFF6EA;
+
+  &-container{
+    display: grid;
+    grid-template-columns: repeat(2,47rem);
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 70%;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small){
+      width: 87%;
+    }
+
+  &-left{
+    display: grid;
+    grid-template-rows: repeat(3,max-content);
+    grid-row-gap: 1rem;
+
+    margin-left: 1rem;
+    width: 50%;
+
+    &--headerContainer{
+      padding: 10px;
+      width: 87%;
+    }
+    &--header{
+      font-family: $font-medium;
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    &--bodyContainer{
+      padding: 10px;
+      width: 77%;
+    }
+    &--body{
+      font-family: $font-medium;
+      font-size: 1.3rem;
+      color: #8B90A4;
+    }
+  }
+
+  &-platformContainer{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    grid-column-gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    &--button{
+      background-color: #403D3D;
+      padding: 0.5rem;
+      height: 5.5rem;
+      width: 15rem;
+      border-radius: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(2,max-content);
+      grid-column-gap: 1rem;
+      align-items: center;
+      justify-content: center;
+
+      @media only screen and (max-width: $bp-small){
+        width: 16rem;
+        height: 6rem;
+      }
+
+      &--imageHolder{
+        width: 3rem;
+        height: 3rem;
+        background-size: contain;
+
+      }
+      &--right{
+        display: grid;
+        grid-template-rows: repeat(2,max-content);
+        align-items: center;
+
+        &-upper{
+          font-family: $font-primary;
+          color: white;
+        }
+        &-lower{
+          font-family: $font-medium;
+          font-size: 1.3rem;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &-right{
+    margin-left: -7rem;
+
+    &--image{
+      width: 50rem;
+      height: 50rem;
+      background-size: contain;
+    }
+  }
+  }
+}
